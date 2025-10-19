@@ -58,7 +58,7 @@ router.post("/", async (req, res) => {
             return res.status(400).json({ error: "Entidade inválida" });
         }
 
-        const controllerAction = entityActions[action.toLowerCase()];
+        const controllerAction = entityActions[action];
         if (!controllerAction) {
             return res.status(400).json({ error: "Ação inválida para essa entidade" });
         }
