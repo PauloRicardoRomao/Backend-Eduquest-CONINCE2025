@@ -1,0 +1,884 @@
+type: collection.insomnia.rest/5.0
+name: API EduQuest
+meta:
+  id: wrk_28479aab2c1a4e9aa0b3cf21e69d52e3
+  created: 1760842156018
+  modified: 1760844672637
+  description: ""
+collection:
+  - name: Aluno
+    meta:
+      id: fld_394a3ee4397e4936a654c307201d0352
+      created: 1760843071054
+      modified: 1760843156814
+      sortKey: -1760843071054
+      description: ""
+    children:
+      - url: http://localhost:3000/api
+        name: Cadastrar Aluno
+        meta:
+          id: req_a1359f387499469d8231342eb5cb8b82
+          created: 1760842156065
+          modified: 1760843359179
+          isPrivate: false
+          description: ""
+          sortKey: -1760843092811
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"entity": "aluno",
+            	"action": "cadastrarAluno",
+            	"data": {
+            		"emailUsuario": "teste.aluno01@example.com",
+            		"senhaUsuario": "12345",
+            		"nomeDadoAluno": "João da Silva",
+            		"dataNascimentoDadoAluno": "2002-05-12"
+            	}
+            }
+        parameters:
+          - id: pair_e093d001e3f546638ac0c98b4e413071
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Alterar Aluno
+        meta:
+          id: req_f5b2fd3bd025439fa19a6711c6ca1668
+          created: 1760843141687
+          modified: 1760843219335
+          isPrivate: false
+          description: ""
+          sortKey: -1760843092911
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "aluno",
+            	"action": "alterarAluno",
+            	"id": 1,
+            	"data": {
+            		"nomeDadoAluno": "João da Silva Atualizado",
+            		"dataNascimentoDadoAluno": "2002-06-15"
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Consultar Aluno
+        meta:
+          id: req_b2d353f3c1114f0f9dbb2deee65587be
+          created: 1760843244151
+          modified: 1760843437451
+          isPrivate: false
+          description: ""
+          sortKey: -1760843093011
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "aluno",
+            	"action": "consultarAluno",
+            	"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Deletar Aluno
+        meta:
+          id: req_8973001fc8f2445baf57c01160a567e2
+          created: 1760843307739
+          modified: 1760843443665
+          isPrivate: false
+          description: ""
+          sortKey: -1760843093211
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "aluno",
+            	"action": "deletarAluno",
+            	"id": 1
+            },
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Vincular Aluno Turma
+        meta:
+          id: req_a36144c070764d77b6db10cf0650f46c
+          created: 1760843362379
+          modified: 1760843441929
+          isPrivate: false
+          description: ""
+          sortKey: -1760843093111
+        method: POST
+        body:
+          mimeType: application/json
+          text: |+
+            {
+            	"entity": "aluno",
+            	"action": "vincularAlunoTurma",
+            	"data": {
+            		"alunoId": 1,
+            		"turmaId": 2
+            	}
+            },
+
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Deletar Vinculo Aluno Turma
+        meta:
+          id: req_6c4f83374a2e4dd2b01260f16527a09e
+          created: 1760843375101
+          modified: 1760843445137
+          isPrivate: false
+          description: ""
+          sortKey: -1760843093311
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "aluno",
+            	"action": "deletarVinculoAlunoTurma",
+            	"data": {
+            		"alunoId": 1,
+            		"turmaId": 2
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Professor
+    meta:
+      id: fld_fe0bd1f9576a40dfb2c4853800d791f6
+      created: 1760843591337
+      modified: 1760843591337
+      sortKey: -1760843591337
+      description: ""
+    children:
+      - url: http://localhost:3000/api
+        name: Cadastrar Professor
+        meta:
+          id: req_16b87f0b4b41496aac852ffedb2bf698
+          created: 1760843602453
+          modified: 1760843951410
+          isPrivate: false
+          description: ""
+          sortKey: -1760843943252
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "professor",
+            	"action": "cadastrarProfessor",
+            	"data": {
+            		"emailUsuario": "professor.teste01@example.com",
+            		"senhaUsuario": "12345",
+            		"nomeDadoProfessor": "Maria Helena"
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Alterar Professor
+        meta:
+          id: req_9878eeac0fd444fe83a0ecf2ba072e1c
+          created: 1760843674778
+          modified: 1760843948274
+          isPrivate: false
+          description: ""
+          sortKey: -1760843943052
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "professor",
+            	"action": "alterarProfessor",
+            	"id": 1,
+            	"data": {
+            		"nomeDadoProfessor": "Maria Helena Atualizada"
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Consultar Professor
+        meta:
+          id: req_9a0bb5bdf39c480d96f5c5428a2ab5c5
+          created: 1760843738684
+          modified: 1760843952825
+          isPrivate: false
+          description: ""
+          sortKey: -1760843943352
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "professor",
+            	"action": "consultarProfessor",
+            	"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Deletar Professor
+        meta:
+          id: req_0acc0e310b004101b28c314ba46ed435
+          created: 1760843789204
+          modified: 1760843945883
+          isPrivate: false
+          description: ""
+          sortKey: -1760843942952
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "professor",
+            	"action": "deletarProfessor",
+            	"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Vincular Professor Matéria
+        meta:
+          id: req_656afb15046643f59c5a3fec22e0eda4
+          created: 1760843834984
+          modified: 1760843942917
+          isPrivate: false
+          description: ""
+          sortKey: -1760843942852
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "professor",
+            	"action": "vincularProfessorMateria",
+            	"data": {
+            		"idProfessor": 1,
+            		"idMateria": 2
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Deletar Vinculo Professor Matéria
+        meta:
+          id: req_a8d410ee8e634d70aa6336d6477300ff
+          created: 1760843889130
+          modified: 1760843949876
+          isPrivate: false
+          description: ""
+          sortKey: -1760843943152
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "professor",
+            	"action": "deletarVinculoProfessorMateria",
+            	"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Matéria
+    meta:
+      id: fld_320ee3b64c2a49b682bbee0d968235cd
+      created: 1760844007330
+      modified: 1760844255159
+      sortKey: -1760844007330
+      description: ""
+    children:
+      - url: http://localhost:3000/api
+        name: Deletar Matéria
+        meta:
+          id: req_1a69e1400ab94c1f801b91ae23d0027b
+          created: 1760844024328
+          modified: 1760844168828
+          isPrivate: false
+          description: ""
+          sortKey: -1760844024328
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "materia",
+            	"action": "deletarMateria",
+            	"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Alterar Matéria
+        meta:
+          id: req_c9fd3b1389234287a4df55ce88ebd547
+          created: 1760844028710
+          modified: 1760844187104
+          isPrivate: false
+          description: ""
+          sortKey: -1760844028710
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "materia",
+            	"action": "alterarMateria",
+            	"id": 1,
+            	"data": {
+            		"descricaoMateria": "Matemática Avançada"
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Consultar Matéria
+        meta:
+          id: req_3016cff5e88749c9801074ce8d608b62
+          created: 1760844031099
+          modified: 1760844208441
+          isPrivate: false
+          description: ""
+          sortKey: -1760844031099
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "materia",
+            	"action": "consultarMateria",
+            	"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Consultar Matérias
+        meta:
+          id: req_461b98b9aec24304931915bbc19c3cf4
+          created: 1760844032918
+          modified: 1760844224923
+          isPrivate: false
+          description: ""
+          sortKey: -1760844032918
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "materia",
+            	"action": "consultarMaterias"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Cadastrar
+        meta:
+          id: req_23a620c7083f454c9a3b00db58b7b97a
+          created: 1760844034245
+          modified: 1760844241188
+          isPrivate: false
+          description: ""
+          sortKey: -1760844034245
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "materia",
+            	"action": "cadastrarMateria",
+            	"data": {
+            		"descricaoMateria": "Matemática"
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Turma
+    meta:
+      id: fld_11db46caedb04e23b80e12edf5743171
+      created: 1760844288189
+      modified: 1760844288189
+      sortKey: -1760844288189
+      description: ""
+    children:
+      - url: http://localhost:3000/api
+        name: Cadastrar Turma
+        meta:
+          id: req_b3c3785ac8d646dbb4a3d44d633b422b
+          created: 1760844291770
+          modified: 1760844419111
+          isPrivate: false
+          description: ""
+          sortKey: -1760844291770
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "turma",
+            	"action": "cadastrarTurma",
+            	"data": {
+            		"limiteTurma": 40
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Consultar Turmas
+        meta:
+          id: req_3fb1a68f675f4a1897df75e815bfe873
+          created: 1760844334223
+          modified: 1760844423779
+          isPrivate: false
+          description: ""
+          sortKey: -1760844334223
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "turma",
+            	"action": "consultarTurmas"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Consultar Turma
+        meta:
+          id: req_cfe529c166104fb8b9301d7bc8e17afb
+          created: 1760844361012
+          modified: 1760844425589
+          isPrivate: false
+          description: ""
+          sortKey: -1760844361012
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "turma",
+            	"action": "consultarTurma",
+            	"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tarefa
+    meta:
+      id: fld_6e923fc8f82e41eda9645fe204ecfa8f
+      created: 1760844472843
+      modified: 1760844482382
+      sortKey: -1760844472844
+      description: ""
+    children:
+      - url: http://localhost:3000/api
+        name: Cadastrar Tarefa
+        meta:
+          id: req_c53481c882334b9ebf7bae2793e46305
+          created: 1760844476108
+          modified: 1760844649802
+          isPrivate: false
+          description: ""
+          sortKey: -1760844479325
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "tarefa",
+            	"action": "cadastrarTarefa",
+            	"data": {
+            		"turmaMateriaProfessorTarefa": 1,
+            		"tituloTarefa": "Trabalho de Banco de Dados",
+            		"descricaoTarefa": "Montar um modelo relacional e diagrama ER.",
+            		"pontoTarefa": 10,
+            		"dataFinalTarefa": "2025-11-05"
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Consultar Tarefas
+        meta:
+          id: req_ca21d3d3841d48bf9eef73efaadd14d8
+          created: 1760844500038
+          modified: 1760844635121
+          isPrivate: false
+          description: ""
+          sortKey: -1760844500038
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "tarefa",
+            	"action": "consultarTarefas"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Consultar Tarefa
+        meta:
+          id: req_cc89eaa5e1dc4e23aedf339ec5272540
+          created: 1760844516222
+          modified: 1760844620869
+          isPrivate: false
+          description: ""
+          sortKey: -1760844516222
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "tarefa",
+            	"action": "consultarTarefa",
+            	"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Alterar Tarefa
+        meta:
+          id: req_84d0d1a3f3184ba683402d617216f4cd
+          created: 1760844536677
+          modified: 1760844603334
+          isPrivate: false
+          description: ""
+          sortKey: -1760844536677
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "tarefa",
+            	"action": "alterarTarefa",
+            	"id": 1,
+            	"data": {
+            		"tituloTarefa": "Trabalho de Banco de Dados — Revisado",
+            		"descricaoTarefa": "Atualizar o modelo lógico e físico do banco.",
+            		"pontoTarefa": 12,
+            		"dataFinalTarefa": "2025-11-10"
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api
+        name: Deletar Tarefa
+        meta:
+          id: req_0529c28be80b49328769d797de5dadf0
+          created: 1760844565081
+          modified: 1760844588818
+          isPrivate: false
+          description: ""
+          sortKey: -1760844565081
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"entity": "tarefa",
+            	"action": "deletarTarefa",
+            	"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_bf5f567a0de2f56016c5bc4ac72c4deede2aac06
+    created: 1760842156034
+    modified: 1760842156034
+environments:
+  name: Base Environment
+  meta:
+    id: env_bf5f567a0de2f56016c5bc4ac72c4deede2aac06
+    created: 1760842156026
+    modified: 1760842156026
+    isPrivate: false
